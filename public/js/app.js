@@ -2,26 +2,26 @@
 'use strict';
 
 angular.module('clientApp', ['ngRoute'])
-.config(function ($routeProvider) {
+.config(function ($routeProvider,nodsemConstants) {
   $routeProvider
-  .when('/', {
-    templateUrl: 'js/view/main.html',
+  .when(nodsemConstants.PATH.SIGNIN, {
+    templateUrl: nodsemConstants.FILEPATH.SIGNIN,
     controller: 'MainCtrl'
   })
-  .when('/dashboard', {
-    templateUrl: 'js/view/dashboard.html',
+  .when(nodsemConstants.PATH.DASHBOARD, {
+    templateUrl: nodsemConstants.FILEPATH.DASHBOARD,
     controller: 'DashboardCtrl'
   })
-  .when('/signup', {
-    templateUrl: 'js/view/signup.html',
+  .when(nodsemConstants.PATH.SIGNUP, {
+    templateUrl: nodsemConstants.FILEPATH.SIGNUP,
     controller: 'signupCtrl'
   })
-  .when('/forgotpassword', {
-    templateUrl: 'js/view/forgotpassword.html',
+  .when(nodsemConstants.PATH.FORGOTPASSWORD, {
+    templateUrl: nodsemConstants.FILEPATH.FORGOTPASSWORD,
     controller: 'forgotpasswordCtrl'
   })
-  .when('/changepassword', {
-    templateUrl: 'js/view/changepassword.html',
+  .when(nodsemConstants.PATH.CHANGEPASSWORD, {
+    templateUrl: nodsemConstants.FILEPATH.CHANGEPASSWORD,
     controller: 'changepasswordCtrl'
   })
 });

@@ -3,12 +3,12 @@
 
     angular.module('clientApp')
     .controller('MainCtrl',
-    function ($scope, $location,$http,signinApiFactory) { 
+    function ($scope, $location,$http,signinApiFactory,nodsemConstants) { 
 
     var username=getCookie("username");
      if(username != "")
       {
-       $location.path('/dashboard')
+       $location.path(nodsemConstants.PATH.DASHBOARD);
       }
      
     //user signin
@@ -43,7 +43,7 @@
                   var sessionemail=response.data.sessionname[0].email; 
                   setCookie("username", sessionname, 30);
                   setCookie("email", sessionemail, 30);
-                  $location.path('/dashboard')    
+                  $location.path(nodsemConstants.PATH.DASHBOARD);    
                 } 
           }, function (error) {
               console.log(error);
@@ -52,11 +52,11 @@
     }            
     };
       $scope.signup = function () {
-      $location.path('/signup')
+      $location.path(nodsemConstants.PATH.SIGNUP);
     };
 
     $scope.forgotpassword = function () {
-      $location.path('/forgotpassword')
+      $location.path(nodsemConstants.PATH.FORGOTPASSWORD);
     };
 
     });

@@ -2,9 +2,9 @@
 
     angular.module('clientApp')
     .controller('signupCtrl',
-    function ($scope, $location,$http,signinApiFactory) {
+    function ($scope, $location,$http,signinApiFactory,nodsemConstants) {
     $scope.signin = function () {
-      $location.path('/')
+       $location.path(nodsemConstants.PATH.SIGNIN);
     };
  
     //user signup
@@ -44,7 +44,7 @@
                }
                else
                {
-                 $location.path('/') 
+                 $location.path(nodsemConstants.PATH.SIGNIN);
                }  
           }, function (error) {
               console.log(error);

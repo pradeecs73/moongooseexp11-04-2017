@@ -3,7 +3,7 @@
 
     angular.module('clientApp')
     .controller('forgotpasswordCtrl',
-    function ($scope, $location,$http) {
+    function ($scope, $location,$http,nodsemConstants) {
      $scope.resetpassword = function () {
 
     $("#validatemessage").html("");
@@ -43,7 +43,7 @@
       else
        {
            alert("New password sent to your mail check your inbox"); 
-            $location.path('/') 
+            $location.path(nodsemConstants.PATH.SIGNIN);
        }  
 
       }).error(function(response)

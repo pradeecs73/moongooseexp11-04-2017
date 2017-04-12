@@ -10,7 +10,7 @@ angular.module('clientApp')
     };
 
     signinFactory.signup = function (inputobject) {
-        return $http.post("signup",inputobject);
+        return $http.post("/signup",inputobject);
     };
 
     signinFactory.changepassword = function (inputobject) {

@@ -3,7 +3,7 @@
   
 angular.module('clientApp')
     .controller('changepasswordCtrl',
-    function ($scope, $location,$http,signinApiFactory) {
+    function ($scope, $location,$http,signinApiFactory,nodsemConstants) {
 
      $scope.changeuserpassword = function () {
  
@@ -33,7 +33,7 @@ angular.module('clientApp')
             .then(function (response) {
                    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
                    document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC";  
-                   $location.path('/')    
+                   $location.path(nodsemConstants.PATH.SIGNIN);    
                   
             }, function (error) {
                 console.log(error);
