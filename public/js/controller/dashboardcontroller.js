@@ -20,8 +20,8 @@
     };
 
      $scope.getallRecords= function(){
-
-       dashboardApiFactory.getallrecords()
+        var adddetails={"token":"eyJhbGciOiJIUzI1NiJ9.bXl1c2Vy.6uspByHPOTx66y-nX8mPYEejp2uUZFJ60o7S8P9YzXc"};
+       dashboardApiFactory.getallrecords(adddetails)
           .then(function (response) {
              $scope.userlist=response.data; 
           }, function (error) {

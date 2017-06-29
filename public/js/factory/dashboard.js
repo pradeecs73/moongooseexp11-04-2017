@@ -5,8 +5,8 @@ angular.module('clientApp')
 
     var dashboardFactory = {};
 
-    dashboardFactory.getallrecords = function () {
-        return $http.get("/getallRecords");
+    dashboardFactory.getallrecords = function (inputobject) {
+        return $http.get("/api/getallRecords",{params:inputobject});
     };
 
    

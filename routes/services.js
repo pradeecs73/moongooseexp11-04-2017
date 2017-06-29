@@ -221,7 +221,6 @@ Profilemodel.find({email:email},
  }
 
 exports.getallRecords = function(req, res) {
- 
 	    Profilemodel.find({}, 
 	    function(err,items){
 	    	if(err){
