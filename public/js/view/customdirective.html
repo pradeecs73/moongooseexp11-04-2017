@@ -1,0 +1,22 @@
+<div class="container-fluid">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="main-navbar">
+    
+ </nav><!--/.navbar navbar-inverse-->
+ </div>
+
+     
+    <div class="container-fluid" style="margin-top:50px;position:relative">
+        {{username}}
+    </div>
+    <search-result></search-result>
+    <div search-result></div>
+    <div class="search-result"></div>
+
+     <search-resultexternal person-name="{{person.name}}" person-address="{{person.address}}"></search-resultexternal>
+
+     <search-resultexternalequals person-object="person">address may not be valid</search-resultexternalequals>
+
+    <search-resultexternalequalswithfunction person-object="person" formatted-address-function="formattedAddress(aperson)">address may not be valid</search-resultexternalequalswithfunction>
+    
+
+    

@@ -9,7 +9,8 @@
              SIGNUP:'/signup',
              FORGOTPASSWORD:'/forgotpassword',
              CHANGEPASSWORD:'/changepassword',
-             DASHBOARD:'/dashboard'
+             DASHBOARD:'/dashboard',
+             CUSTOM:'/customdirective'
           },
        FILEPATH:
           {
@@ -17,7 +18,8 @@
              SIGNUP:'js/view/signup.html',
              FORGOTPASSWORD:'js/view/forgotpassword.html',
              CHANGEPASSWORD:'js/view/changepassword.html',
-             DASHBOARD:'js/view/dashboard.html'
+             DASHBOARD:'js/view/dashboard.html',
+             CUSTOM:'js/view/customdirective.html'
           }
 
     });

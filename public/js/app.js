@@ -23,5 +23,8 @@ angular.module('clientApp', ['ngRoute'])
   .when(nodsemConstants.PATH.CHANGEPASSWORD, {
     templateUrl: nodsemConstants.FILEPATH.CHANGEPASSWORD,
     controller: 'changepasswordCtrl'
+  }).when(nodsemConstants.PATH.CUSTOM, {
+    templateUrl: nodsemConstants.FILEPATH.CUSTOM,
+    controller: 'customCtrl'
   })
 });

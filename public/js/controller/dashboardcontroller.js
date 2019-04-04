@@ -9,6 +9,7 @@
       }
   
       $scope.name=username;
+      $scope.watchname="pradeep";
     
      $scope.signout = function () {
       document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
@@ -18,6 +19,13 @@
    $scope.changepassword = function () {
       $location.path(nodsemConstants.PATH.CHANGEPASSWORD);
     };
+
+    $scope.watchchange = function () {
+       $scope.watchname="chandrika";
+    };
+
+    $scope.$watch('watchname', function(newvalue,oldvalue) {
+    });
 
      $scope.getallRecords= function(){
         var adddetails={"token":"eyJhbGciOiJIUzI1NiJ9.bXl1c2Vy.6uspByHPOTx66y-nX8mPYEejp2uUZFJ60o7S8P9YzXc"};
