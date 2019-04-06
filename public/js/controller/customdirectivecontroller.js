@@ -1,8 +1,10 @@
 'use strict';
  var myapp= angular.module('clientApp');
     myapp.controller('customCtrl',
-    function ($scope, $location,$http,dashboardApiFactory,nodsemConstants) {
+    function ($scope,$rootScope, $timeout,$location,$http,dashboardApiFactory,nodsemConstants,dashboardservice) {
     $scope.username=getCookie("username");
+    $scope.servicename=dashboardservice.getname();
+
     $scope.person={
        name:"john doe",
        address:"england kapton",
