@@ -48,9 +48,9 @@
               </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="user in userlist">
+              <tr ng-repeat="user in userlist | orderBy:'username'"><!--filter:{username:'naveen'}-->
                 <td>{{user._id}}</td>
-                <td>{{user.username}}</td>
+                <td>{{user.username | shorten}}</td>
                 <td>{{user.email}}</td>
               </tr>
             </tbody>
@@ -64,13 +64,18 @@
             </thead>
             <tbody>
               <tr>
-                <td>{{watchname}}</td>
+                <td>{{watchname}}{{friendhome}}</td>
                 <td><button href="" ng-click="watchchange()">change name</button></td>
               </tr>
             </tbody>
       </table>
     </div>
 
+    
+
     <div class="container-fluid" ng-controller="DashboardCtr2">
-      <input type="button" ng-click="emitdata()" value="emitdata">
+      <input type="button" ng-click="emitdata();emitteddata=true" value="emitdata">
+      <input type="button" ng-if="emitteddata"  value="buttondisplayedafteremitting">
     </div>
+
+   

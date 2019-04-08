@@ -10,7 +10,17 @@ angular.module('clientApp', ['ngRoute'])
   })
   .when(nodsemConstants.PATH.DASHBOARD, {
     templateUrl: nodsemConstants.FILEPATH.DASHBOARD,
-    controller: 'DashboardCtrl'
+    controller: 'DashboardCtrl',
+    resolve:{
+      'myclosefriendmysore':function(){
+        return {
+          'home':function()
+          {
+             return 'kuvempunagar';
+          }
+        }
+      }
+    }
   })
   .when(nodsemConstants.PATH.SIGNUP, {
     templateUrl: nodsemConstants.FILEPATH.SIGNUP,

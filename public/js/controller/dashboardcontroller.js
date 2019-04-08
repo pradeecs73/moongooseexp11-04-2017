@@ -1,8 +1,9 @@
 'use strict';
   angular.module('clientApp')
     .controller('DashboardCtrl',
-    function ($scope,$rootScope,$timeout, $location,$http,dashboardApiFactory,nodsemConstants,dashboardservice) {
+    function ($scope,$rootScope,$timeout, $location,$http,dashboardApiFactory,nodsemConstants,dashboardservice,myclosefriendmysore) {
     var username=getCookie("username");
+    $scope.friendhome=myclosefriendmysore.home();
       
           $scope.$on('eventName', function (event, args) {
           $scope.message = args.message;
@@ -59,5 +60,15 @@
             console.log(data.message);
             });
   
+      
+    }).filter('shorten',function(){
+
+        return function(username)
+        {
+          if(username.length > 4);
+          {
+            return username.substr(0,4);
+          }
+        }
       
     });
