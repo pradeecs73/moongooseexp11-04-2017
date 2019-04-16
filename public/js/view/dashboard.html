@@ -52,6 +52,8 @@
                 <td>{{user._id}}</td>
                 <td>{{user.username | shorten}}</td>
                 <td>{{user.email}}</td>
+               <td><a href="javascript:void(0)" ng-click="useredit(user._id)">edit</a></td>
+                <!--<td><a href="#/user/25/edit?target={{name}}" >edit</a></td>-->
               </tr>
             </tbody>
       </table>

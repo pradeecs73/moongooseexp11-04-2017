@@ -36,5 +36,8 @@ angular.module('clientApp', ['ngRoute'])
   }).when(nodsemConstants.PATH.CUSTOM, {
     templateUrl: nodsemConstants.FILEPATH.CUSTOM,
     controller: 'customCtrl'
+  }).when(nodsemConstants.PATH.USEREDIT, {
+    templateUrl: nodsemConstants.FILEPATH.USEREDIT,
+    controller: 'usereditCtrl'
   })
 });

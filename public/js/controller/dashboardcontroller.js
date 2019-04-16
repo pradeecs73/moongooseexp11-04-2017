@@ -48,6 +48,12 @@
 
      }
 
+     $scope.useredit=function(userid){
+       var locationpath=nodsemConstants.PATH.USEREDIT;
+           locationpath=locationpath.replace(":id",userid);
+            $location.path(locationpath);
+     }
+
     }).controller('DashboardCtr2',
     function ($scope,$timeout){
       

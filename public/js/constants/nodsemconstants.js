@@ -10,7 +10,8 @@
              FORGOTPASSWORD:'/forgotpassword',
              CHANGEPASSWORD:'/changepassword',
              DASHBOARD:'/dashboard',
-             CUSTOM:'/customdirective'
+             CUSTOM:'/customdirective',
+             USEREDIT:'/user/:id/edit'
           },
        FILEPATH:
           {
@@ -19,7 +20,8 @@
              FORGOTPASSWORD:'js/view/forgotpassword.html',
              CHANGEPASSWORD:'js/view/changepassword.html',
              DASHBOARD:'js/view/dashboard.html',
-             CUSTOM:'js/view/customdirective.html'
+             CUSTOM:'js/view/customdirective.html',
+             USEREDIT:'js/view/useredit.html'
           }
 
     });
